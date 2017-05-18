@@ -19,7 +19,7 @@ public class DeleteEquipageServlet extends AbstractGenericServlet{
 		Integer idEquipage = Integer.parseInt(req.getParameter("numeroEquipage"));
 		EquipagesService.getInstance().deleteEquipages(idEquipage); // on supprime un equipage
 		
-		resp.sendRedirect("../accueil"); // redirection vers l'accueil
+		resp.sendRedirect("../equipage"); // redirection vers l'accueil
 		
 	}
 }

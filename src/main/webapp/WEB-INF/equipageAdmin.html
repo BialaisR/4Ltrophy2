@@ -95,10 +95,18 @@
 			<div id="description_equipage" class="col-md-12">
 				<p th:text ="${equipages.descriptionEquipage}">.</p>
 			</div>
-			
-			<div class="col-sm-12">
- 		 		<button class="btn btn-primary btn-xs btn btn-danger">supprimer</button>
-			</div>
+
+		</div>
+		
+		<div id="divequip" class="row container">
+			<h3>Supprimer un équipage :</h3>
+			<form action="delete/equipage" method="post">
+				<label for="numeroEquipage">Numéro de l'équipage</label> <input
+						type="text" class="form-control" id="numeroEquipage" name="numeroEquipage" placeholder="exemple : 438">
+						<button type="submit" class="btn btn-danger" >
+					<b>Supprimer</b>
+				</button>
+				</form>
 
 		</div>
 			
