@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Equipages</title>
+
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<link href="css/nav.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/equipages.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<!-- GRAND DIV  -->
+		<header>
+			<div class="masthead">
+				<!--  titre du site -->
+				<h1 class="text-center">
+					<a href="accueil" class="nom">4L TROPHY HEI</a>
+				</h1>
+				<!-- barre de navigation -->
+				<nav>
+					<ul class="nav nav-justified">
+						<li><a href="accueil">Accueil</a></li>
+						<li><a class="active" href="equipage">Equipages</a></li>
+						<li><a href="photos_videos">Photos-Vidéos</a></li>
+						<li><a href="forum">Forum</a></li>
+						<li><a href="contact">Contact</a></li>
+						<li class="dropdown"><a href="#" class="dropbtn">Admin &darr;</a>
+							<div class="dropdown-content">
+								<a href="connexion">Se connecter</a>
+									<a href="/4Ltrophy/deconnexion">Se déconnecter</a>
+							</div></li>
+					</ul>
+				</nav>
+			</div>
+		
+		</header>
+		
+		<!--  div affichage des equipages -->
+		<div id="divequip" class="row container" th:each="equipages:${equipages}">
+			<div class="col-sm-4">
+				<div>
+					<img src="http://placehold.it/280x280" alt="photoequipage">
+				</div>
+			</div>
+
+			<div id="nom_equip" class="col-sm-8">
+				<h1 th:text="${equipages.nomEquipage}"></h1>
+			</div>
+
+
+			<div class="col-md-2">
+				<img src="http://placehold.it/150x150" alt="photoprofil1">
+			</div>
+
+			<div class="col-md-2">
+				<p>
+					<b th:text="${equipages.nom1}"></b>
+				</p>
+				<p>
+					<b th:text="${equipages.prenom1}"></b>
+				</p> 
+				<p th:text="${equipages.mail1}"></p>
+				<p th:text="${equipages.classe1}"></p>
+			</div>
+			<div class="col-md-2">
+				<img src="http://placehold.it/150x150" alt="photoprofil2">
+			</div>
+			<div class="col-md-2">
+				<p>
+					<b th:text="${equipages.nom2}"></b>
+				</p>
+				<p>
+					<b th:text="${equipages.prenom2}"></b>
+				</p>
+				<p th:text="${equipages.mail2}"></p>
+				<p th:text="${equipages.classe2}"></p>
+			</div>
+
+			<div id="description_equipage" class="col-md-12">
+				<p th:text ="${equipages.descriptionEquipage}">.</p>
+			</div>
+
+		</div>
+
+	
+
+
+		
+
+		<!--  mentions legales footer -->
+		<footer class="footer">
+			<p>&copy; Mentions légales</p>
+		</footer>
+
+	</div>
+</body>
+</html>

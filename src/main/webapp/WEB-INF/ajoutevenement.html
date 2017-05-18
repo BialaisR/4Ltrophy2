@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Nouvel événement</title>
+
+<script src="../js/jquery-3.1.1.js" type="text/javascript"></script>
+
+<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+<link href="../css/nav.css" rel="stylesheet">
+
+<link href="../css/ajoutevenement.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<!-- GRAND DIV  -->
+		<header>
+			<div class="masthead">
+				<!--  titre du site -->
+				<h1 class="text-center">
+					<a href="accueil" class="nom">4L TROPHY HEI</a>
+				</h1>
+				<!--  barre de navigation -->
+				<nav>
+					<ul class="nav nav-justified">
+						<li><a  class="active" href="accueil">Accueil</a></li>
+						<li class="dropdown"><a href="#" class="dropbtn">Equipages &darr;</a>
+							<div class="dropdown-content">
+								<a href="equipage">Equipages</a> 
+								<a href="AjoutEquipage">Ajouter un équipage</a>
+							</div></li>
+						<li><a href="photos_videos">Photos-Vidéos</a></li>
+						<li><a href="forum">Forum</a></li>
+						<li><a href="contact">Contact</a></li>
+						<li class="dropdown"><a href="#" class="dropbtn">Admin &darr;</a>
+							<div class="dropdown-content">
+								<a data-toggle="modal" data-target="#myModal2">Se connecter</a> 
+									<a href="/4Ltrophy/deconnexion">Se déconnecter</a>
+							</div></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+		
+		<!-- section du formulaire -->
+		<section id="newevent">
+			<p>
+				<a class="btn btn-primary" href="accueil" role="button"><b>Retour
+						accueil &raquo;</b></a>
+			</p>
+			<!--  formulaire d'ajout evenement -->
+			<form action="send/evenement" method="post">
+				<div class="form-group">
+					<label for="dateEvent">Date</label> <input id="dateEvent" name="dateEvent" type="text" placeholder="ex: 03 juin 2017 à 17h"
+						class="form-control">
+				</div>
+				<div class="form-group">
+					<textarea type="text" class="form-control" id="event" name="event" rows="5"
+						placeholder="Description... ex: AfterWork au Loulou"></textarea>
+				</div>
+				<button type="submit" class="btn btn-success">
+					<b>Ajouter</b>
+				</button>
+			</form>
+		</section>
+		
+		<div class="modal fade" id="myModal2" role="dialog">
+    			<div class="modal-dialog">
+    
+     		 <!-- Modal content-->
+     				 <div class="modal-content">
+       					 <div class="modal-header">
+         				 	<button type="button" class="close" data-dismiss="modal">&times;</button>
+         				 	<h4 class="modal-title">Erreur</h4>
+       					 </div>
+        				 <div class="modal-body">
+          					<p>Vous êtes déjà connecté</p>
+        				</div>
+        				<div class="modal-footer">
+          					<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+       				   </div>
+      				</div>
+      
+   			 	</div>
+ 		 </div>
+
+	</div>
+
+</body>
+</html>

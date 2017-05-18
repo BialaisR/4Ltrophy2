@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Forum</title>
+
+<script src="../js/jquery-3.1.1.js" type="text/javascript"></script>
+
+<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+<link href="../css/nav.css" rel="stylesheet">
+
+<link href="../css/newdiscussion.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<!-- GRAND DIV  -->
+		<header>
+			<div class="masthead">
+				<!--  titre du site -->
+				<h1 class="text-center">
+					<a href="accueil" class="nom">4L TROPHY HEI</a>
+				</h1>
+				<!--  barre de navigation -->
+				<nav>
+					<ul class="nav nav-justified">
+						<li><a href="accueil">Accueil</a></li>
+						<li class="dropdown"><a href="#" class="dropbtn">Equipages &darr;</a>
+							<div class="dropdown-content">
+								<a href="equipage">Equipages</a> 
+								<a href="AjoutEquipage">Ajouter un équipage</a>
+							</div></li>
+						<li><a href="photos_videos">Photos-Vidéos</a></li>
+						<li><a class="active" href="forum">Forum</a></li>
+						<li><a href="contact">Contact</a></li>
+						<li class="dropdown"><a href="#" class="dropbtn">Admin &darr;</a>
+							<div class="dropdown-content">
+								<a data-toggle="modal" data-target="#myModal2">Se connecter</a> 
+									<a href="/4Ltrophy/deconnexion">Se déconnecter</a>
+							</div></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<!--  section creation nouveau sujet -->
+		<section id="forumnewsujet">
+			<p>
+				<a class="btn btn-primary" href="forum" role="button"><b>Retour
+						forum &raquo;</b></a>
+			</p>
+			<!--  formulaire nouveau sujet -->
+			<form action="envoyernouveausujet" method="post">
+				<div class="form-group">
+					<label for="nom_sujet">Nom du nouveau sujet</label> <input
+						type="text" class="form-control" id="text"
+						placeholder="Nom du nouveau sujet">
+				</div>
+				<div class="form-group">
+					<label for="message_sujet">Message</label>
+					<textarea type="text" class="form-control" id="message sujet"
+						rows="7" placeholder="Ecrivez ici votre message..."></textarea>
+				</div>
+				<button id="btn_newdiscussion" type="submit" class="btn btn-primary">
+					<b>Envoyer</b>
+				</button>
+			</form>
+		</section>
+		
+		<div class="modal fade" id="myModal2" role="dialog">
+    			<div class="modal-dialog">
+    
+     		 <!-- Modal content-->
+     				 <div class="modal-content">
+       					 <div class="modal-header">
+         				 	<button type="button" class="close" data-dismiss="modal">&times;</button>
+         				 	<h4 class="modal-title">Erreur</h4>
+       					 </div>
+        				 <div class="modal-body">
+          					<p>Vous êtes déjà connecté</p>
+        				</div>
+        				<div class="modal-footer">
+          					<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+       				   </div>
+      				</div>
+      
+   			 	</div>
+ 		 </div>
+
+		<!--  mentions légales footer -->
+		<footer class="footer">
+			<p>&copy; Mentions légales</p>
+		</footer>
+
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Forum</title>
+
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<link href="css/nav.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/forum.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<!-- GRAND DIV  -->
+		<header>
+			<div class="masthead">
+				<!--  titre du site -->
+				<h1 class="text-center">
+					<a href="accueil" class="nom">4L TROPHY HEI</a>
+				</h1>
+				<!--  barre de navigation -->
+				<nav>
+					<ul class="nav nav-justified">
+						<li><a href="accueil">Accueil</a></li>
+						<li><a href="equipage">Equipages</a></li>
+						<li><a href="photos_videos">Photos-Vidéos</a></li>
+						<li><a class="active" href="forum">Forum</a></li>
+						<li><a href="contact">Contact</a></li>
+						<li class="dropdown"><a href="#" class="dropbtn">Admin &darr;</a>
+							<div class="dropdown-content">
+								<a href="connexion">Se connecter</a>
+									<a href="/4Ltrophy/deconnexion">Se déconnecter</a>
+							</div></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- section affichage forum -->
+		<section class="row container" id="forumaccueil">
+			<p>
+			<!--  bouton nouvelle discussion -->
+				<a class="btn btn-primary" href="newdiscussion" role="button"><b>Créer
+						une nouvelle discussion &raquo;</b></a>
+			</p>
+			<!--  liste des sujets -->
+			<table class="table table-hover" id="forumtableau">
+				<thead>
+					<tr>
+						<th id="borderTopLeft">Discussions</th>
+						<th>Réponses</th>
+						<th id="borderRightLeft">Dernier message</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td><a href="charte" class="lienforum"><b>Charte du forum (à lire avant de publier un message)</b></a></td>
+						<td><a href="charte" class="lienforum">-</a></td>
+						<td><a href="charte" class="lienforum">-</a></td>
+					
+					</tr>
+					
+					<tr th:each="sujet : ${sujet}">
+
+						<td><a href="sujetforum" class="lienforum"><b th:text="${sujet.nomSujet}"></b></a></td>
+						<td><a href="sujetforum" class="lienforum"><b th:text="${sujet.nbMessage}"></b></a></td>
+						<td><a href="sujetforum" class="lienforum"><b th:text="${sujet.dateLastPost}"></b></a></td>
+					</tr>
+
+					
+				</tbody>
+
+
+			</table>
+		</section>
+		
+		<!--  mentions légales footer -->
+		<footer class="footer">
+			<p>&copy; Mentions légales</p>
+		</footer>
+	</div>
+</body>
+</html>

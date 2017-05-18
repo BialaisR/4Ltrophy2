@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Nouvelle actualité</title>
+
+<script  src="../js/jquery-3.1.1.js" type="text/javascript"></script>
+
+<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+<link href="../css/nav.css" rel="stylesheet">
+
+<link  href="../css/ajoutActu.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<!-- GRAND DIV  -->
+		<header>
+			<div class="masthead">
+				<!--  titre du site web -->
+				<h1 class="text-center">
+					<a href="accueil" class="nom">4L TROPHY HEI</a>
+				</h1>
+				<!--  barre de navigation -->
+				<nav>
+					<ul class="nav nav-justified">
+						<li><a  class="active" href="accueil">Accueil</a></li>
+						<li class="dropdown"><a href="#" class="dropbtn">Equipages &darr;</a>
+							<div class="dropdown-content">
+								<a href="equipage">Equipages</a> 
+								<a href="AjoutEquipage">Ajouter un équipage</a>
+							</div></li>
+						<li><a href="photos_videos">Photos-Vidéos</a></li>
+						<li><a href="forum">Forum</a></li>
+						<li><a href="contact">Contact</a></li>
+						<li class="dropdown"><a href="#" class="dropbtn">Admin &darr;</a>
+							<div class="dropdown-content">
+								<a data-toggle="modal" data-target="#myModal2">Se connecter</a>
+									<a href="/4Ltrophy/deconnexion">Se déconnecter</a>
+							</div></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<section id="newactu">
+			<p>
+			<!--  bouton retour accueil -->
+				<a class="btn btn-primary" href="accueil" role="button"><b>Retour
+						accueil &raquo;</b></a>
+			</p>
+			<!--  formulaire ajout d'une actu -->
+			<form action="send/actu" method="post">
+				<div class="form-group">
+					<label for="titreActu">Titre de la nouvelle actualité</label> <input
+						type="text" class="form-control" id="titreActu" name="titreActu" placeholder="Titre">
+				</div>
+				<div class="form-group">
+					<textarea type="text" class="form-control" id="actu" name="actu" rows="7"
+						placeholder="Actualité..."></textarea>
+				</div>
+				<!--  bouton ajouter -->
+				<button type="submit" class="btn btn-success" >
+					<b>Ajouter</b>
+				</button>
+				
+			</form>
+		</section>
+		
+		<!--  message d'erreur - vous etes deja connecté -->
+		<div class="modal fade" id="myModal2" role="dialog">
+    			<div class="modal-dialog">
+    
+     		 <!-- Modal content-->
+     				 <div class="modal-content">
+       					 <div class="modal-header">
+         				 	<button type="button" class="close" data-dismiss="modal">&times;</button>
+         				 	<h4 class="modal-title">Erreur</h4>
+       					 </div>
+        				 <div class="modal-body">
+          					<p>Vous êtes déjà connecté</p>
+        				</div>
+        				<div class="modal-footer">
+          					<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+       				   </div>
+      				</div>
+      
+   			 	</div>
+ 		 </div>
+ 		 <!-- mentions légales + copyright -->
+		<footer class="footer">
+			<p>&copy; Mentions légales</p>
+			
+		</footer>
+
+	</div>
+
+</body>
+</html>

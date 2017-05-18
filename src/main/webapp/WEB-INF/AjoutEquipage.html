@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Ajout Equipage</title>
+
+<script  src="../js/jquery-3.1.1.js" type="text/javascript"></script>
+
+<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="../js/inscription.js" type="text/javascript"></script>
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+<link href="../css/nav.css" rel="stylesheet">
+
+ <link href="../css/ajoutActu.css" rel="stylesheet" type="text/css"> 
+
+</head>
+
+<body>
+
+	<div class="container">
+		<!-- GRAND DIV  -->
+		<header>
+			<div class="masthead">
+				<!--  titre du site -->
+				<h1 class="text-center">
+					<a href="accueil" class="nom">4L TROPHY HEI</a>
+				</h1>
+				<!--  barre de navigation -->
+				<nav>
+					<ul class="nav nav-justified">
+						<li><a href="accueil">Accueil</a></li>
+						<li class="dropdown"><a href="#" class="dropbtn">Equipages &darr;</a>
+							<div class="dropdown-content">
+								<a href="equipage">Equipages</a> 
+								<a class="active" href="AjoutEquipage">Ajouter un équipage</a>
+							</div></li>
+						<li><a href="photos_videos">Photos-Vidéos</a></li>
+						<li><a href="forum">Forum</a></li>
+						<li><a href="contact">Contact</a></li>
+						<li class="dropdown"><a href="#" class="dropbtn">Admin &darr;</a>
+							<div class="dropdown-content">
+								<a data-toggle="modal" data-target="#myModal2">Se connecter</a> 
+									<a href="/4Ltrophy/deconnexion">Se déconnecter</a>
+							</div></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section class="container globalform">
+		
+			<div class="col-md-6">
+				<h1>Ajouter un équipage</h1>
+				<!--  formulaire ajout équipage -->
+				<form name ="formEquipage" class="inscrform" action="send/equipage" method="post">
+
+				<div class="form-group">
+					<label for="NomEquipage">Nom d'équipage</label> <input type="text"
+						class="form-control" id="nomEquipage" name="nomEquipage" placeholder="Nom d'équipage">
+				</div>
+				
+				<div class="form-group">
+					<label for="nom1">Nom Participant 1</label> <input type="text"
+						class="form-control" id="nom1" name="nom1" placeholder="Nom du participant 1">
+				</div>
+				
+				<div class="form-group">
+					<label for="prenom1">Prénom Participant 1</label> <input type="text"
+						class="form-control" id="prenom1" name="prenom1" placeholder="Prénom du participant 1">
+				</div>
+				
+				<div class="form-group">
+					<label for="mail1">Mail Participant 1</label> <input type="text"
+						class="form-control" id="mail1" name="mail1" placeholder="ex : jean.durant@gmail.com">
+				</div>
+				
+				<div class="form-group">
+					<label for="classe1">Classe Participant 1</label> <input type="text"
+						class="form-control" id="classe1" name="classe1" placeholder="ex : H33">
+				</div>
+				
+				<div class="form-group">
+					<label for="nom2">Nom Participant 2</label> <input type="text"
+						class="form-control" id="nom2" name="nom2" placeholder="Nom du participant 2">
+				</div>
+				
+				<div class="form-group">
+					<label for="prenom2">Prénom Participant 2</label> <input type="text"
+						class="form-control" id="prenom2" name="prenom2" placeholder="Prénom du participant 2">
+				</div>
+				
+				<div class="form-group">
+					<label for="mail2">Mail Participant 2</label> <input type="text"
+						class="form-control" id="mail2" name="mail2" placeholder="ex : jean.durant@gmail.com">
+				</div>
+				
+				<div class="form-group">
+					<label for="classe2">Classe Participant 2</label> <input type="text"
+						class="form-control" id="classe2" name="classe2" placeholder="ex : H33">
+				</div>
+
+				<div class="form-group">
+					<label for="description">Description de l'équipage</label>
+					<textarea type="text" class="form-control" id="descriptionEquipage" name="descriptionEquipage"
+						rows="5" placeholder="Décrivez votre équipage en quelque mots..."></textarea>
+				</div>
+
+				<div id="file_2">
+					<h5>Ajoutez une image d'équipage</h5>
+					<input type="file" name="photoEquipage" id="photoEquipage">
+				</div>
+				
+				<div id="file_3">
+					<h5>Ajoutez une image du participant 1</h5>
+					<input type="file" name="photo1" id="photo1">
+				</div>
+				
+				<div id="file_4">
+					<h5>Ajoutez une image du participant 2</h5>
+					<input type="file" name="photo2" id="photo2">
+				</div>
+				
+				
+			<div id="valdiv">
+				<button type="submit" class="btn btn-success"
+									id="valider"><b>Valider</b></button>
+			</div>
+	
+				
+				</form>
+
+			</div>
+
+		</section>
+		
+		<!--  mentions légales footer -->
+		<footer class="footer">
+			<p>&copy; Mentions légales</p>
+		</footer>
+
+
+	</div>
+
+
+
+
+</body>
+</html>
+	

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Forum</title>
+
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<link href="css/nav.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/newdiscussion.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<!-- GRAND DIV  -->
+		<header>
+			<div class="masthead">
+				<!--  titre du site -->
+				<h1 class="text-center">
+					<a href="accueil" class="nom">4L TROPHY HEI</a>
+				</h1>
+				<!--  barre de navigation -->
+				<nav>
+					<ul class="nav nav-justified">
+						<li><a href="accueil">Accueil</a></li>
+						<li class="dropdown"><a href="#" class="dropbtn">Equipages &darr;</a>
+							<div class="dropdown-content">
+								<a href="equipage">Equipages</a> 
+								<a href="gerercomptes">Gérer les comptes</a>
+							</div></li>
+						<li><a href="photos_videos">Photos-Vidéos</a></li>
+						<li><a class="active" href="forum">Forum</a></li>
+						<li><a href="contact">Contact</a></li>
+						<li class="dropdown"><a href="#" class="dropbtn">Admin &darr;</a>
+							<div class="dropdown-content">
+								<a href="connexion">Se connecter</a>
+									<a href="/4Ltrophy/deconnexion">Se déconnecter</a>
+							</div></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<!--  section ajout d'un sujet -->
+		<section id="forumnewsujet">
+			<p>
+				<a class="btn btn-primary" href="forum" role="button"><b>Retour
+						forum &raquo;</b></a>
+			</p>
+			<!--  formulaire ajout sujet -->
+			<form action="send/newdiscussion" method="post">
+				<div class="form-group">
+					<label for="nomSujet">Nom du nouveau sujet</label> <input
+						type="text" class="form-control" id="nomSujet"
+						placeholder="Nom du nouveau sujet">
+				</div>
+				<div class="form-group">
+					<label for="message_sujet">Message</label>
+					<textarea type="text" class="form-control" id="message"
+						rows="7" placeholder="Ecrivez ici votre message..."></textarea>
+				</div>
+				<button id="btn_newdiscussion" type="submit" class="btn btn-primary">
+					<b>Envoyer</b>
+				</button>
+			</form>
+		</section>
+
+		<!--  mentions legales footer -->
+		<footer class="footer">
+			<p>&copy; Mentions légales</p>
+		</footer>
+
+
+	</div>
+
+</body>
+</html>
