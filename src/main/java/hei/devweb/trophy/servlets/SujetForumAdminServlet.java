@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
 
+import hei.devweb.trophy.services.MessageService;
+
 /* Les servlets permettent de relier notre back-end avec notre front-end 
  * et définissent les méthodes qui seront utilisées sur cette page
  */
@@ -23,6 +25,7 @@ public class SujetForumAdminServlet extends AbstractGenericServlet{
 		resp.setCharacterEncoding("UTF-8");
 		TemplateEngine templateEngine = this.createTemplateEngine(req);
 		WebContext context = new WebContext(req, resp, getServletContext());
+		context.setVariable("message",MessageService.getInstance().listMessage());
 		
 		templateEngine.process("sujetforumAdmin", context, resp.getWriter()); // page html associée
 		
