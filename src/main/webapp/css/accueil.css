@@ -1,3 +1,17 @@
+#idEvent{
+	height: 40px;
+  	width: 100px;
+}
+
+#idActu{
+	height: 40px;
+  	width: 100px;
+}
+
+#suppr{
+	margin-top : 5px;
+}
+
 .google_calendar{
 	color: red;
 }
