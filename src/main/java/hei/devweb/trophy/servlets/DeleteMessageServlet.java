@@ -17,7 +17,7 @@ public class DeleteMessageServlet extends AbstractGenericServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Integer idMessage = Integer.parseInt(req.getParameter("idMessage"));
-		MessageService.getInstance().addMessage(idMessage, null, null, idMessage); // on supprime un message
+		MessageService.getInstance().deleteMessage(idMessage); // on supprime un message
 		
 		resp.sendRedirect("../accueil"); // redirection vers l'accueil
 		

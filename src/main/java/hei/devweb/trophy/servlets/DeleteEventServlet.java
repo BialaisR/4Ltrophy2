@@ -17,7 +17,7 @@ public class DeleteEventServlet extends AbstractGenericServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Integer idEvent = Integer.parseInt(req.getParameter("idEvent"));
-		EvenementsService.getInstance().addEvenements(idEvent, null, null); // on supprime un événement
+		EvenementsService.getInstance().deleteEvenements(idEvent); // on supprime un événement
 		
 		resp.sendRedirect("../accueil"); // redirection vers l'accueil
 		

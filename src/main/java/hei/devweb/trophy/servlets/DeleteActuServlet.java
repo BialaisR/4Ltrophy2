@@ -17,7 +17,7 @@ public class DeleteActuServlet extends AbstractGenericServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Integer idActu = Integer.parseInt(req.getParameter("idActu"));
-		ActualitesService.getInstance().addActualites(idActu, null, null); // on ajoute une nouvelle actualité
+		ActualitesService.getInstance().deleteActualites(idActu); // on ajoute une nouvelle actualité
 		
 		resp.sendRedirect("../accueil"); // redirection vers l'accueil
 		

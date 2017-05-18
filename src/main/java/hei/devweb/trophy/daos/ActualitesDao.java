@@ -53,8 +53,7 @@ public class ActualitesDao {
 	
 	public void deleteActualites(Integer idActu){
 		try (Connection connection = DataSourceProvider.getInstance().getDataSource().getConnection(); 
-			PreparedStatement statement = connection.prepareStatement("DELETE * FROM actualites WHERE idActu=?")) {
-			
+			PreparedStatement statement = connection.prepareStatement("DELETE FROM actualites WHERE idActu=?")) {		
 			statement.setInt(1, idActu);
 			statement.executeUpdate();	
 		}catch (SQLException e) {

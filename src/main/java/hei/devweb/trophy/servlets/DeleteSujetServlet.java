@@ -17,7 +17,7 @@ public class DeleteSujetServlet extends AbstractGenericServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Integer idSujet = Integer.parseInt(req.getParameter("idSujet"));
-		SujetService.getInstance().addSujet(idSujet, null, null, null, null, null); // on supprime un sujet
+		SujetService.getInstance().deleteSujet(idSujet); // on supprime un sujet
 		
 		resp.sendRedirect("../accueil"); // redirection vers l'accueil
 		

@@ -61,13 +61,23 @@
 							<p><b th:text="${evenements.dateEvent}"></b></p>
 							<p th:text="${evenements.event}"></p>
 							<!-- bouton supprimer -->
-							<button class="btn btn-primary btn-xs btn btn-danger">supprimer</button><br><br><br>
+							<h6 th:text="'(Evenement n°'+${evenements.idEvent}+')'"></h6>
 						</article>
 					<p>
 						<!-- bouton ajouter -->
 						<a class="btn btn-success btn-xs" href="ajoutevenement"
 							role="button">+ Ajouter un évènement</a>
 					</p>
+					<div>
+				<h4>Supprimer un événement :</h4>
+				<form action="delete/event" method="post">
+				<label for="idEvent">Numéro de l'événement à supprimer</label> <input
+						type="text" class="form-control" id="idEvent" name="idEvent" placeholder="exemple : 3">
+						<button type="submit" class="btn btn-danger" >
+					<b>Supprimer</b>
+				</button>
+				</form>
+				</div>
 				</div>
 				<!-- affichage du calendrier -->
 				<div id="#calendrier">
@@ -82,18 +92,29 @@
 			</div>
 			<!-- colonne affichage des actualitées (plus récente en haut) -->
 			<div id="actu" class="col-sm-7">
+			<div>
 				<h1>Actualités</h1>
 				<article th:each="actualites : ${actualites}">
 					<!-- Div d'une actualité  -->
 					<h2 th:text="${actualites.titreActu}"></h2>
 					<p th:text="${actualites.actu}"></p>
-					<!--  bouton supprimer -->
-					<button class="btn btn-primary btn-xs btn btn-danger">supprimer</button><br><br><br>
+					<h6 th:text="'(Actualité n°'+${actualites.idActu}+')'"></h6>
 				</article>
 					<!--  bouton ajouter -->
 					<a class="btn btn-success btn-xs" href="ajoutActu"
 						role="button">+ Ajouter une actualité</a>
 				</p>
+				</div>
+				<div>
+				<h3>Supprimer une actualité :</h3>
+				<form action="delete/actu" method="post">
+				<label for="idActu">Numéro de l'actualité à supprimer</label> <input
+						type="text" class="form-control" id="idActu" name="idActu" placeholder="exemple : 3">
+						<button type="submit" class="btn btn-danger" >
+					<b>Supprimer</b>
+				</button>
+				</form>
+				</div>
 			</div>
 			<!-- affichage de la colonne météo -->
 			<div id="meteo" class="col-sm-2">

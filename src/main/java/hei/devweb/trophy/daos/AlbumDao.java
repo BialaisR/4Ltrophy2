@@ -51,7 +51,7 @@ public class AlbumDao {
 	
 	public void deleteAlbum(Integer idAlbum){
 		try (Connection connection = DataSourceProvider.getInstance().getDataSource().getConnection(); 
-			PreparedStatement statement = connection.prepareStatement("DELETE * FROM album WHERE idAlbum=?")) {
+			PreparedStatement statement = connection.prepareStatement("DELETE FROM album WHERE idAlbum=?")) {
 			
 			statement.setInt(1, idAlbum);
 			statement.executeUpdate();	
